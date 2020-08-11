@@ -21,9 +21,8 @@ class ViewController: UIViewController {
         //        myCollectionView.collectionViewLayout = layout
         myCollectionView.dataSource = self
         myCollectionView.delegate = self
-        
-        let nib = UINib(nibName: "CollectionReusableView", bundle: nil)
-        myCollectionView.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerId")
+
+        myCollectionView.register(HeaderView.nib(), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
         
     }
 }
@@ -48,7 +47,7 @@ extension ViewController: UICollectionViewDataSource {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             
-            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath) as? CollectionReusableView else {
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.identifier, for: indexPath) as? HeaderView else {
                     fatalError("Invalid view type")
             }
             

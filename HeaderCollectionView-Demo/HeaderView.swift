@@ -8,14 +8,19 @@
 
 import UIKit
 
-class CollectionReusableView: UICollectionReusableView , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class HeaderView: UICollectionReusableView , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
+    static let identifier = "HeaderView"
     @IBOutlet weak var mySubCollectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
         
         setUpView()
         
+    }
+    
+    static func nib() -> UINib {
+        return .init(nibName: "HeaderView", bundle: nil)
     }
     
     private func setUpView() {
@@ -25,11 +30,11 @@ class CollectionReusableView: UICollectionReusableView , UICollectionViewDataSou
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         mySubCollectionView.collectionViewLayout = layout
-                mySubCollectionView.showsHorizontalScrollIndicator = false
+        mySubCollectionView.showsHorizontalScrollIndicator = false
         
         
         mySubCollectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
-
+        
         mySubCollectionView.backgroundColor = .red
     }
     

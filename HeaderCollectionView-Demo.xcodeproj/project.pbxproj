@@ -13,8 +13,8 @@
 		11D79A9D24DFDF8300007211 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D79A9B24DFDF8300007211 /* Main.storyboard */; };
 		11D79A9F24DFDF8500007211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11D79A9E24DFDF8500007211 /* Assets.xcassets */; };
 		11D79AA224DFDF8500007211 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D79AA024DFDF8500007211 /* LaunchScreen.storyboard */; };
-		D94EA37C24E0E40800096186 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94EA37A24E0E40800096186 /* CollectionReusableView.swift */; };
-		D94EA37D24E0E40800096186 /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94EA37B24E0E40800096186 /* CollectionReusableView.xib */; };
+		D94EA37C24E0E40800096186 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94EA37A24E0E40800096186 /* HeaderView.swift */; };
+		D94EA37D24E0E40800096186 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94EA37B24E0E40800096186 /* HeaderView.xib */; };
 		D94EA38024E0E53D00096186 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94EA37E24E0E53D00096186 /* MyCollectionViewCell.swift */; };
 		D94EA38124E0E53D00096186 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94EA37F24E0E53D00096186 /* MyCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -28,8 +28,8 @@
 		11D79A9E24DFDF8500007211 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11D79AA124DFDF8500007211 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11D79AA324DFDF8500007211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D94EA37A24E0E40800096186 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
-		D94EA37B24E0E40800096186 /* CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
+		D94EA37A24E0E40800096186 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		D94EA37B24E0E40800096186 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		D94EA37E24E0E53D00096186 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		D94EA37F24E0E53D00096186 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,8 +71,8 @@
 				11D79A9E24DFDF8500007211 /* Assets.xcassets */,
 				11D79AA024DFDF8500007211 /* LaunchScreen.storyboard */,
 				11D79AA324DFDF8500007211 /* Info.plist */,
-				D94EA37A24E0E40800096186 /* CollectionReusableView.swift */,
-				D94EA37B24E0E40800096186 /* CollectionReusableView.xib */,
+				D94EA37A24E0E40800096186 /* HeaderView.swift */,
+				D94EA37B24E0E40800096186 /* HeaderView.xib */,
 				D94EA37E24E0E53D00096186 /* MyCollectionViewCell.swift */,
 				D94EA37F24E0E53D00096186 /* MyCollectionViewCell.xib */,
 			);
@@ -139,7 +139,7 @@
 			files = (
 				D94EA38124E0E53D00096186 /* MyCollectionViewCell.xib in Resources */,
 				11D79AA224DFDF8500007211 /* LaunchScreen.storyboard in Resources */,
-				D94EA37D24E0E40800096186 /* CollectionReusableView.xib in Resources */,
+				D94EA37D24E0E40800096186 /* HeaderView.xib in Resources */,
 				11D79A9F24DFDF8500007211 /* Assets.xcassets in Resources */,
 				11D79A9D24DFDF8300007211 /* Main.storyboard in Resources */,
 			);
@@ -155,7 +155,7 @@
 				11D79A9A24DFDF8300007211 /* ViewController.swift in Sources */,
 				D94EA38024E0E53D00096186 /* MyCollectionViewCell.swift in Sources */,
 				11D79A9624DFDF8300007211 /* AppDelegate.swift in Sources */,
-				D94EA37C24E0E40800096186 /* CollectionReusableView.swift in Sources */,
+				D94EA37C24E0E40800096186 /* HeaderView.swift in Sources */,
 				11D79A9824DFDF8300007211 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
