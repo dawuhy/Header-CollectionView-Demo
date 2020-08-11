@@ -10,10 +10,15 @@ import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell {
     
+    static let identifier = "MyCollectionViewCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.backgroundColor = .red
     }
     
+    static func nib() -> UINib {
+        return .init(nibName: identifier, bundle: nil)
+    }
 }

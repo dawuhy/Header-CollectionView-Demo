@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController {
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
@@ -19,17 +19,13 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         //        let layout = UICollectionViewFlowLayout()
         //        layout.itemSize = .init(width: 120, height: 120)
         //        myCollectionView.collectionViewLayout = layout
-        
-        let nib = UINib(nibName: "CollectionReusableView", bundle: nil)
-        myCollectionView.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerId")
         myCollectionView.dataSource = self
         myCollectionView.delegate = self
         
+        let nib = UINib(nibName: "CollectionReusableView", bundle: nil)
+        myCollectionView.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerId")
+        
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-           return .init(width: 120, height: 120)
-       }
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -51,11 +47,11 @@ extension ViewController: UICollectionViewDataSource {
         
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            guard
-                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath) as? CollectionReusableView else {
+            
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath) as? CollectionReusableView else {
                     fatalError("Invalid view type")
             }
-    
+            
             headerView.backgroundColor = .green
             
             return headerView
@@ -69,3 +65,8 @@ extension ViewController: UICollectionViewDataSource {
     }
 }
 
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return .init(width: 120, height: 120)
+    }
+}

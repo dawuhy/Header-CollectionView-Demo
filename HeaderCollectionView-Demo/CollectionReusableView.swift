@@ -19,15 +19,17 @@ class CollectionReusableView: UICollectionReusableView , UICollectionViewDataSou
     }
     
     private func setUpView() {
+        mySubCollectionView.dataSource = self
+        mySubCollectionView.delegate = self
+        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         mySubCollectionView.collectionViewLayout = layout
+                mySubCollectionView.showsHorizontalScrollIndicator = false
         
-        let nib = UINib(nibName: "MyCollectionViewCell", bundle: nil)
-        mySubCollectionView.showsHorizontalScrollIndicator = false
-        mySubCollectionView.register(nib, forCellWithReuseIdentifier: "cellId")
-        mySubCollectionView.dataSource = self
-        mySubCollectionView.delegate = self
+        
+        mySubCollectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
+
         mySubCollectionView.backgroundColor = .red
     }
     
@@ -36,7 +38,7 @@ class CollectionReusableView: UICollectionReusableView , UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = mySubCollectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        let cell = mySubCollectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath)
         cell.backgroundColor = .green
         
         return cell
